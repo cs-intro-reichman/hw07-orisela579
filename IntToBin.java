@@ -8,7 +8,20 @@ public class IntToBin {
 
     /** Returns the binary representation of the given integer, as a string of 0's and 1's.  */
     public static String toBinary(int x) {
-        //// Replace the following statement with your code
-        return "";
-    }    
+        String ch = "";
+        if(x==0){
+            return "0";
+        }
+        if(x==1){
+            return "1";
+        }
+        if(x%2==0){
+            ch = "0";
+        }
+        else{
+            ch = "1";
+        }
+        x = x / 2;
+        return toBinary(x) + ch;
+    }
  }
